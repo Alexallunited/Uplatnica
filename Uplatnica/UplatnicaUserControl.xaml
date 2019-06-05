@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Uplatnica.UplatnicaUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uplatnica"
+             mc:Ignorable="d" Height="350" Width="740">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="336" Margin="13,7,0,0" VerticalAlignment="Top" Width="719" Background="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="66" Margin="66,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="257"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="66" Margin="66,133,0,0" Stroke="Black" VerticalAlignment="Top" Width="257"/>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="66" Margin="66,226,0,0" Stroke="Black" VerticalAlignment="Top" Width="257"/>
+        <TextBox x:Name="uplatilacTextBox" HorizontalAlignment="Left" Height="23" Margin="74,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" MaxLines="2" />
+        <TextBox x:Name="adresaUplatiocaTextBox" HorizontalAlignment="Left" Height="23" Margin="74,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" MaxLines="1"/>
+        <TextBox x:Name="svrhaTextBox" HorizontalAlignment="Left" Height="56" Margin="74,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" MaxLines="3"/>
+        <TextBox x:Name="primalacTextBox" HorizontalAlignment="Left" Height="23" Margin="74,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" MaxLines="1"/>
+        <TextBox x:Name="adresaPrimaocaTextBox" HorizontalAlignment="Left" Height="23" Margin="74,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" MaxLines="4"/>
+        <TextBox x:Name="sifraTextBox" HorizontalAlignment="Left" Height="23" Margin="386,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" TextAlignment="Center" MaxLength="3" PreviewKeyDown="SifraTextBox_PreviewKeyDown" MaxLines="1"   />
+        <TextBox x:Name="valutaTextBox" HorizontalAlignment="Left" Height="23" Margin="461,90,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="55"  Text="RSD" IsReadOnly="True" MaxLines="1"/>
+        <TextBox x:Name="iznosTextBox" HorizontalAlignment="Left" Height="23" Margin="542,90,0,0" TextWrapping="Wrap" TextAlignment="Right"  VerticalAlignment="Top" Width="153" Text="{Binding Value, StringFormat={}{0:#,#0.00}}" TextChanged="IznosTextBox_TextChanged"  MaxLines="1" PreviewKeyDown="IznosTextBox_PreviewKeyDown" MaxLength="11"/>
+        <TextBox x:Name="racunTextBox" HorizontalAlignment="Left" Height="23" Margin="386,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="309" MaxLength="20" PreviewKeyDown="RacunTextBox_PreviewKeyDown" LostFocus="RacunTextBox_LostFocus" MaxLines="1"/>
+        <TextBox x:Name="modelTextBox" HorizontalAlignment="Left" Height="23" Margin="387,212,0,0" TextWrapping="Wrap" MaxLength="2" VerticalAlignment="Top" Width="55"  PreviewKeyDown="ModelTextBox_PreviewKeyDown" MaxLines="1"/>
+        <TextBox x:Name="pozivTextBox" HorizontalAlignment="Left" Height="23" Margin="479,212,0,0" TextWrapping="Wrap" MaxLength="20" VerticalAlignment="Top" Width="217" PreviewKeyDown="PozivTextBox_PreviewKeyDown" MaxLines="1"/>
+        <Label Content="Nalog za uplatu" HorizontalAlignment="Left" Margin="567,7,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" x:Name="lblNalogZaUplatu"/>
+        <Label Content="uplatilac" HorizontalAlignment="Left" Margin="66,11,0,0" VerticalAlignment="Top" x:Name="lblCompanyInfo"/>
+        <Label Content="svrha uplate" HorizontalAlignment="Left" Margin="66,108,0,0" VerticalAlignment="Top" x:Name="lblPurpose"/>
+        <Label Content="primalac" HorizontalAlignment="Left" Margin="66,200,0,0" VerticalAlignment="Top" x:Name="lblPayeeCompanyInfo"/>
+        <Label Content="šifra &#xA;plaćanja" HorizontalAlignment="Left" Margin="385,43,0,0" VerticalAlignment="Top" x:Name="lblPurposeCode"/>
+        <Label Content="valuta" HorizontalAlignment="Left" Margin="461,59,0,0" VerticalAlignment="Top" x:Name="lblCurDef"/>
+        <Label Content="iznos" HorizontalAlignment="Left" Margin="542,59,0,0" VerticalAlignment="Top" x:Name="lblTrnAmt"/>
+        <Label Content="račun primaoca" HorizontalAlignment="Left" Margin="385,124,0,0" VerticalAlignment="Top" x:Name="lblPayeeAccountInfo"/>
+        <Label Content="model i poziv na broj (odobrenje)" HorizontalAlignment="Left" Margin="386,181,0,0" VerticalAlignment="Top" x:Name="lblRefModelRefNumber"/>
+        <DatePicker x:Name="datum" HorizontalAlignment="Left" Margin="504,282,0,0" VerticalAlignment="Top" Width="102" />
+        <TextBox x:Name="mestoTextBox" HorizontalAlignment="Left" Height="23" Margin="345,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" MaxLines="1"/>
+        <Label Content="mesto i datum prijema" HorizontalAlignment="Left" Margin="405,307,0,0" VerticalAlignment="Top" x:Name="lblTrnPlace"/>
+    </Grid>
+</UserControl>
